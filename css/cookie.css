@@ -1,0 +1,76 @@
+.pmg-cookie-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #a1c967; /* Old browsers */
+  background: -moz-linear-gradient(top, #c8e996 0%, #a1c967 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8e996), color-stop(100%,#a1c967)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #c8e996 0%,#a1c967 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #c8e996 0%,#a1c967 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #c8e996 0%,#a1c967 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #c8e996 0%,#a1c967 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8e996', endColorstr='#a1c967',GradientType=0 ); /* IE6-9 */
+  border-bottom: 1px solid black;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  color: #666;
+}
+
+.pmg-cookie-wrap a,
+.pmg-cookie-wrap a:visited {
+  color: #666;
+  text-decoration: underline;
+}
+
+.pmg-cookie-wrap a:hover {
+  text-decoration: none;
+}
+
+.pmg-cookie-wrap > .pmg-cookie-pad:before,
+.pmg-cookie-wrap > .pmg-cookie-pad:after {
+  content: " ";
+  display: table;
+}
+
+.pmg-cookie-wrap > .pmg-cookie-pad:after {
+  clear: both;
+}
+
+body.admin-bar .pmg-cookie-wrap {
+  top: 28px;
+}
+
+.pmg-cookie-wrap > .pmg-cookie-pad {
+  *zoom: 1;
+  height: 100%;
+  padding: 0.5em 1em;
+}
+
+.pmg-cookie-wrap .dismiss-wrap {
+  font-size: 0.9em;
+}
+
+.pmg-cookie-wrap .messaging {
+  float: left;
+}
+
+.pmg-cookie-wrap .more-info {
+  float: right;
+}
+
+.pmg-cookie-wrap .message-wrap {
+  margin-bottom: 0.2em;
+}
+
+@media screen and (max-width: 800px) {
+  .pmg-cookie-wrap .dismiss-wrap,
+  .pmg-cookie-wrap .messaging,
+  .pmg-cookie-wrap .more-info {
+    float: none;
+  }
+
+  .pmg-cookie-wrap .dismiss-wrap {
+    padding: 0.3em 0;
+  }
+}
