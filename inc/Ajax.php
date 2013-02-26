@@ -35,9 +35,48 @@ class Ajax extends CookieBase
             return $zero;
         }
 
+        $eu = apply_filters('pmg_cookie_eu_countries', array(
+            'uk', // not ISO compliant, but just in case...
+            'gb',
+            'at',
+            'be',
+            'bg',
+            'cy',
+            'dk',
+            'ee',
+            'fi',
+            'fr',
+            'de',
+            'gr',
+            'hu',
+            'ie',
+            'it',
+            'lv',
+            'lt',
+            'lu',
+            'mt',
+            'nl',
+            'pl',
+            'pt',
+            'ro',
+            'sk',
+            'si',
+            'es',
+            'se',
+            'hr',
+            'is',
+            'me',
+            'rs',
+            'mk',
+            'tr',
+            'al',
+            'ba',
+            'va',
+        ));
+
         $country = $this->getGeoIpClient($this->getSetting()->get('api_client'))->getCountry($ip);
 
-        if ('gb' == strtolower($country)) {
+        if (in_array(strtolower($country), $eu)) {
             return '1';
         }
 
